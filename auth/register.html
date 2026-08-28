@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Create Account — Wise Web</title>
+
+<link rel="stylesheet" href="../styles.css">
+
+
+</head>
+
+<body>
+
+
+<main>
+
+    <section class="auth-page">
+
+        <div class="auth-box">
+
+            <a href="../index.html" class="logo">
+                WISE<span class="dot">·</span>WEB
+            </a>
+
+            <h1>Create your account</h1>
+
+            <p class="auth-subtitle">
+                Create a Wise Web customer account.
+            </p>
+
+            <form id="registerForm">
+
+                <div class="field">
+                    <label for="name">Full name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="e.g. Brian Otieno"
+                        required
+                        autocomplete="name"
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="email">Email address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                        autocomplete="email"
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        required
+                        minlength="8"
+                        autocomplete="new-password"
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="confirmPassword">Confirm password</label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Confirm your password"
+                        required
+                        minlength="8"
+                        autocomplete="new-password"
+                    >
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                    style="width:100%; justify-content:center;"
+                >
+                    Create Account
+                </button>
+
+                <p id="registerMessage" class="form-note"></p>
+
+            </form>
+
+            <p class="auth-register">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="auth.js"></script>
+
+
+</body>
+
+</html>

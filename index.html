@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wise Web — Building Websites. Growing Businesses.</title>
+<meta name="description" content="Wise Web builds websites, hosting, branding and digital services for businesses, schools, churches and NGOs — with flexible Pay-As-You-Use plans.">
+<meta name="theme-color" content="#0F2438">
+<meta property="og:title" content="Wise Web — Building Websites. Growing Businesses.">
+<meta property="og:description" content="Websites, hosting, branding and digital marketing — pay in full or spread the cost with Pay-As-You-Use.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F2438'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' fill='%23D9A441' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 7px 11px;
+  border: 1px solid rgba(247,245,239,0.16);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.055);
+  color: rgba(247,245,239,0.62);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.09em;
+}
+.hero-badge::first-letter { color: #e6b95e; }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="wrap">
+    <a href="#" class="logo">WISE<span class="dot">·</span>WEB</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services" data-nav>Services</a>
+      <a href="#packages" data-nav>Packages</a>
+      <a href="#process" data-nav>How it works</a>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <a href="auth/login.html" class="btn btn-ghost">Log in</a>
+
+      <a href="#packages" class="btn btn-primary">Get a quote</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Wise Dragon Group / Digital Agency</span>
+      <div class="hero-badge" aria-label="Wise Web digital agency">● ONLINE — BUILDING DIGITAL PRESENCE</div>
+      <h1>Building Websites.<br><em>Growing Businesses.</em></h1>
+      <p class="lede">We design, build and host websites for businesses, schools, churches and NGOs — then keep them running. Pay in full, or spread the cost with Pay-As-You-Use.</p>
+      <div class="hero-ctas">
+        <a href="#packages" class="btn btn-primary">View packages</a>
+        <a href="#contact" class="btn btn-ghost">Request a quotation</a>
+      </div>
+      <div class="hero-stats">
+        <div><span class="num">4</span><span class="lbl">PACKAGE TIERS</span></div>
+        <div><span class="num">6–18mo</span><span class="lbl">PAY-AS-YOU-USE</span></div>
+        <div><span class="num">5%</span><span class="lbl">AFFILIATE PAYOUT</span></div>
+      </div>
+    </div>
+
+    <div class="blueprint">
+      <span class="tag">FIG. 00 — SITE DRAFT</span>
+      <svg viewBox="0 0 400 460" xmlns="http://www.w3.org/2000/svg">
+        <!-- browser chrome -->
+        <rect class="bp-fill" x="20" y="30" width="360" height="26" />
+        <circle class="bp-accent" cx="36" cy="43" r="4" />
+        <circle class="bp-fill" cx="50" cy="43" r="4" />
+        <circle class="bp-fill" cx="64" cy="43" r="4" />
+        <rect class="bp-line" x="20" y="30" width="360" height="400" />
+        <line class="bp-line" x1="20" y1="56" x2="380" y2="56" />
+
+        <!-- nav -->
+        <line class="bp-line" x1="40" y1="80" x2="140" y2="80" />
+        <line class="bp-line" x1="260" y1="80" x2="360" y2="80" />
+        <text class="bp-label" x="40" y="72">NAV</text>
+
+        <!-- hero block -->
+        <rect class="bp-fill" x="40" y="106" width="320" height="120" />
+        <rect class="bp-line" x="40" y="106" width="320" height="120" />
+        <line class="bp-line" x1="60" y1="140" x2="230" y2="140" />
+        <line class="bp-line" x1="60" y1="160" x2="190" y2="160" />
+        <rect class="bp-line" x="60" y="184" width="86" height="24" />
+        <text class="bp-label" x="40" y="98">HERO</text>
+
+        <!-- three cards -->
+        <rect class="bp-line" x="40" y="250" width="94" height="86" />
+        <rect class="bp-line" x="153" y="250" width="94" height="86" />
+        <rect class="bp-line" x="266" y="250" width="94" height="86" />
+        <text class="bp-label" x="40" y="242">SERVICES</text>
+
+        <!-- footer -->
+        <line class="bp-line" x1="40" y1="380" x2="360" y2="380" />
+        <line class="bp-line" x1="40" y1="400" x2="120" y2="400" />
+        <line class="bp-line" x1="150" y1="400" x2="230" y2="400" />
+        <line class="bp-line" x1="260" y1="400" x2="340" y2="400" />
+        <text class="bp-label" x="40" y="372">FOOTER</text>
+
+        <!-- dimension line -->
+        <line class="bp-line" x1="20" y1="446" x2="380" y2="446" />
+        <text class="bp-label" x="180" y="440">1280 × 900</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="dim-line"></div></div>
+
+<!-- ===================== SERVICES — FIG.01 ===================== -->
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="block-head">
+      <div>
+        <span class="eyebrow">FIG. 01 — What we build</span>
+        <h2>One team, every layer of going online.</h2>
+      </div>
+      <p>From the first sketch to the server it runs on — website, hosting, brand and growth, handled under one roof.</p>
+    </div>
+
+    <div class="svc-grid">
+      <div class="svc-card">
+        <span class="idx">01</span>
+        <h3>Website Development</h3>
+        <p>Business, school, church, NGO, hotel, portfolio and real-estate sites, built to convert.</p>
+      </div>
+      <div class="svc-card">
+        <span class="idx">02</span>
+        <h3>Hosting & Domains</h3>
+        <p>Domains, SSL and business email, kept online and renewed on schedule.</p>
+      </div>
+      <div class="svc-card">
+        <span class="idx">03</span>
+        <h3>Branding & Design</h3>
+        <p>Logo design and brand identity that matches the site we build around it.</p>
+      </div>
+      <div class="svc-card">
+        <span class="idx">04</span>
+        <h3>Growth & Marketing</h3>
+        <p>SEO, digital marketing and social media management to bring the traffic in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PACKAGES — FIG.02 ===================== -->
+<section class="block" id="packages" style="background:var(--paper-raised); border-top:1px solid var(--grid-line-strong); border-bottom:1px solid var(--grid-line-strong);">
+  <div class="wrap">
+    <div class="block-head">
+      <div>
+        <span class="eyebrow">FIG. 02 — Package specification</span>
+        <h2>Pick a tier. Pay how it suits you.</h2>
+      </div>
+      <p>Every package can be paid in full, or spread over 6, 12 or 18 months through Pay-As-You-Use (15% financing charge applies).</p>
+    </div>
+
+    <div class="pkg-grid">
+      <div class="pkg-card">
+        <h3>Starter</h3>
+        <p class="pkg-tagline">For a first, credible online presence</p>
+        <div class="pkg-price">KSh 15,000 <small>one-time</small></div>
+        <div class="pkg-payg">PAYG from KSh 17,250 · deposit KSh 5,000</div>
+        <ul class="pkg-terms">
+          <li>6 / 12 / 18-month terms</li>
+          <li>Core pages included</li>
+          <li>Mobile responsive</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Choose Starter</a>
+      </div>
+
+      <div class="pkg-card is-featured">
+        <h3>Business</h3>
+        <p class="pkg-tagline">For a growing team or shopfront</p>
+        <div class="pkg-price">KSh 35,000 <small>one-time</small></div>
+        <div class="pkg-payg">PAYG from KSh 40,250 · deposit KSh 10,000</div>
+        <ul class="pkg-terms">
+          <li>6 / 12 / 18-month terms</li>
+          <li>Extended page set</li>
+          <li>Basic SEO setup</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Choose Business</a>
+      </div>
+
+      <div class="pkg-card">
+        <h3>Professional</h3>
+        <p class="pkg-tagline">For an established brand</p>
+        <div class="pkg-price">KSh 70,000 <small>one-time</small></div>
+        <div class="pkg-payg">PAYG from KSh 80,500 · deposit KSh 20,000</div>
+        <ul class="pkg-terms">
+          <li>6 / 12 / 18-month terms</li>
+          <li>Custom design system</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Choose Professional</a>
+      </div>
+
+      <div class="pkg-card">
+        <h3>E-Commerce</h3>
+        <p class="pkg-tagline">For selling online</p>
+        <div class="pkg-price">From KSh 100,000 <small>one-time</small></div>
+        <div class="pkg-payg">PAYG from KSh 115,000 · deposit KSh 30,000</div>
+        <ul class="pkg-terms">
+          <li>6 / 12 / 18-month terms</li>
+          <li>Product catalog & checkout</li>
+          <li>M-PESA payment integration</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Choose E-Commerce</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS — FIG.03 ===================== -->
+<section class="block" id="process">
+  <div class="wrap">
+    <div class="block-head">
+      <div>
+        <span class="eyebrow">FIG. 03 — Build sequence</span>
+        <h2>From quotation to a live site.</h2>
+      </div>
+      <p>The same four steps, every time — so you always know what stage your project is at.</p>
+    </div>
+
+    <div class="process">
+      <div class="p-step">
+        <div class="node"></div>
+        <h4>01 — REQUEST</h4>
+        <p>Tell us the package and details; we send a quotation.</p>
+      </div>
+      <div class="p-step">
+        <div class="node"></div>
+        <h4>02 — DEPOSIT</h4>
+        <p>Pay in full or place a deposit and choose a repayment term.</p>
+      </div>
+      <div class="p-step">
+        <div class="node"></div>
+        <h4>03 — BUILD</h4>
+        <p>Track progress live from your customer dashboard.</p>
+      </div>
+      <div class="p-step">
+        <div class="node"></div>
+        <h4>04 — LAUNCH</h4>
+        <p>Your site goes live; hosting and domain renew automatically.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA BAND ===================== -->
+<section class="cta-band">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--gold);">Ready when you are</span>
+    <h2>Let's draft your site.</h2>
+    <p>Request a free quotation — no obligation, no jargon.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-primary">Request a quotation</a>
+      <a href="https://wa.me/254700000000" class="btn btn-ghost" target="_blank" rel="noopener">Talk to us on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT — FIG.04 ===================== -->
+<section class="block" id="contact">
+  <div class="wrap">
+    <div class="block-head">
+      <div>
+        <span class="eyebrow">FIG. 04 — Get in touch</span>
+        <h2>Tell us what you're building.</h2>
+      </div>
+      <p>Fill in the form and we'll reply with a written quotation, usually within one business day.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="info-row">
+          <h5>EMAIL</h5>
+          <a href="mailto:hello@wiseweb.co.ke">hello@wiseweb.co.ke</a>
+        </div>
+        <div class="info-row">
+          <h5>PHONE / WHATSAPP</h5>
+          <a href="tel:+254700000000">+254 700 000 000</a>
+        </div>
+        <div class="info-row">
+          <h5>LOCATION</h5>
+          <p>Nairobi, Kenya — remote clients welcome</p>
+        </div>
+        <div class="info-row">
+          <h5>RESPONSE TIME</h5>
+          <p>Within 1 business day</p>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" placeholder="e.g. Jane Wanjiru" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="package">Package you're interested in</label>
+          <select id="package" name="package">
+            <option value="">Not sure yet</option>
+            <option>Starter</option>
+            <option>Business</option>
+            <option>Professional</option>
+            <option>E-Commerce</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Tell us about your project</label>
+          <textarea id="message" name="message" placeholder="What kind of site do you need, and by when?" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send request</button>
+        <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="logo">WISE<span class="dot">·</span>WEB</a>
+        <p>A Wise Dragon Group company. Building websites, hosting and brands for businesses across Kenya.</p>
+      </div>
+      <div class="foot-col">
+        <h5>SERVICES</h5>
+        <ul>
+          <li><a href="#services">Website Development</a></li>
+          <li><a href="#services">Hosting & Domains</a></li>
+          <li><a href="#services">Branding</a></li>
+          <li><a href="#services">SEO & Marketing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>COMPANY</h5>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Affiliate Program</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>SUPPORT</h5>
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="dim-line"></div>
+    <div class="foot-bottom" style="margin-top:22px;">
+      <span>© <span id="year">2026</span> WISE DRAGON GROUP</span>
+      <span>NAIROBI, KENYA</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login — Wise Web</title>
+
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+  <main>
+
+
+<section class="auth-page">
+
+  <div class="auth-box">
+
+    <a href="../index.html" class="logo">
+      WISE<span class="dot">·</span>WEB
+    </a>
+
+    <h1>Welcome back</h1>
+
+    <p class="auth-subtitle">
+      Login to your Wise Web account.
+    </p>
+
+    <form id="loginForm">
+
+      <div class="field">
+        <label for="email">Email address</label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+        >
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+        >
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-primary"
+        style="width:100%; justify-content:center;"
+      >
+        Login
+      </button>
+
+      <p id="loginMessage" class="form-note"></p>
+
+    </form>
+
+    <p class="auth-register">
+      Don't have an account?
+      <a href="register.html">Create one</a>
+    </p>
+
+  </div>
+
+</section>
+
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="auth.js"></script>
+
+</body>
+</html>
