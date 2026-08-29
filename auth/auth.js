@@ -1,191 +1,195 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
+
+    // ==============================
+    // LOGIN
+    // ==============================
+
+    const loginForm = document.getElementById("loginForm");
+    const loginMessage = document.getElementById("loginMessage");
+
+    if (loginForm) {
+
+        loginForm.addEventListener("submit", async (event) => {
+
+            event.preventDefault();
+
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+
+            if (!email || !password) {
+                loginMessage.textContent =
+                    "Please enter your email and password.";
+
+                loginMessage.className = "form-note is-error";
+                return;
+            }
+
+            loginMessage.textContent = "Logging in...";
+            loginMessage.className = "form-note";
+
+            const { data, error } =
+                await supabaseClient.auth.signInWithPassword({
+                    email: email,
+                    password: password
+                });
+
+            if (error) {
+
+                console.error("Login error:", error);
+
+                loginMessage.textContent = error.message;
+                loginMessage.className = "form-note is-error";
+
+                return;
+            }
+
+            console.log("Logged in user:", data.user);
+
+            loginMessage.textContent = "Login successful!";
+            loginMessage.className = "form-note is-success";
+
+            setTimeout(() => {
+                window.location.href =
+                    "../dashboard/customer.html";
+            }, 1000);
+
+        });
+
+    }
 
 
-const loginForm = document.getElementById("loginForm");
-const registerForm = document.getElementById("registerForm");
+    // ==============================
+    // REGISTRATION
+    // ==============================
 
-
-// =========================
-// LOGIN
-// =========================
-
-if (loginForm) {
-
-    const loginMessage =
-        document.getElementById("loginMessage");
-
-    loginForm.addEventListener("submit", async function (event) {
-
-        event.preventDefault();
-
-        const email =
-            document.getElementById("email").value.trim();
-
-        const password =
-            document.getElementById("password").value;
-
-
-        if (email === "" || password === "") {
-
-            loginMessage.textContent =
-                "Please enter your email and password.";
-
-            loginMessage.className =
-                "form-note is-error";
-
-            return;
-        }
-
-
-        loginMessage.textContent =
-            "Logging in...";
-
-        loginMessage.className =
-            "form-note";
-
-
-        const { data, error } =
-            await supabaseClient.auth.signInWithPassword({
-                email: email,
-                password: password
-            });
-
-
-        if (error) {
-
-            console.error(error);
-
-            loginMessage.textContent =
-                "Login failed: " + error.message;
-
-            loginMessage.className =
-                "form-note is-error";
-
-            return;
-        }
-
-
-        console.log("Logged in user:", data.user);
-
-        loginMessage.textContent =
-            "Login successful!";
-
-        loginMessage.className =
-            "form-note is-success";
-
-    });
-
-}
-
-
-// =========================
-// REGISTRATION
-// =========================
-
-if (registerForm) {
+    const registerForm =
+        document.getElementById("registerForm");
 
     const registerMessage =
         document.getElementById("registerMessage");
 
+    if (registerForm) {
 
-    registerForm.addEventListener("submit", async function (event) {
+        registerForm.addEventListener("submit", async (event) => {
 
-        event.preventDefault();
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const password =
+                document.getElementById("password").value;
+
+            const confirmPassword =
+                document.getElementById("confirmPassword").value;
 
 
-        const name =
-            document.getElementById("name").value.trim();
+            // Check fields
 
-        const email =
-            document.getElementById("email").value.trim();
+            if (!name || !email || !password || !confirmPassword) {
 
-        const password =
-            document.getElementById("password").value;
+                registerMessage.textContent =
+                    "Please fill in all fields.";
 
-        const confirmPassword =
-            document.getElementById("confirmPassword").value;
+                registerMessage.className =
+                    "form-note is-error";
+
+                return;
+            }
 
 
-        if (name === "" || email === "" || password === "") {
+            // Check password length
+
+            if (password.length < 8) {
+
+                registerMessage.textContent =
+                    "Password must be at least 8 characters.";
+
+                registerMessage.className =
+                    "form-note is-error";
+
+                return;
+            }
+
+
+            // Check passwords match
+
+            if (password !== confirmPassword) {
+
+                registerMessage.textContent =
+                    "Passwords do not match.";
+
+                registerMessage.className =
+                    "form-note is-error";
+
+                return;
+            }
+
 
             registerMessage.textContent =
-                "Please fill in all required fields.";
+                "Creating your account...";
 
             registerMessage.className =
-                "form-note is-error";
-
-            return;
-        }
+                "form-note";
 
 
-        if (password.length < 8) {
+            // Create Supabase account
 
-            registerMessage.textContent =
-                "Password must be at least 8 characters.";
+            const { data, error } =
+                await supabaseClient.auth.signUp({
 
-            registerMessage.className =
-                "form-note is-error";
+                    email: email,
 
-            return;
-        }
+                    password: password,
 
+                    options: {
 
-        if (password !== confirmPassword) {
+                        data: {
+                            full_name: name
+                        }
 
-            registerMessage.textContent =
-                "Passwords do not match.";
-
-            registerMessage.className =
-                "form-note is-error";
-
-            return;
-        }
-
-
-        registerMessage.textContent =
-            "Creating your account...";
-
-        registerMessage.className =
-            "form-note";
-
-
-        const { data, error } =
-            await supabaseClient.auth.signUp({
-                email: email,
-                password: password,
-                options: {
-                    data: {
-                        full_name: name
                     }
-                }
-            });
+
+                });
 
 
-        if (error) {
+            if (error) {
 
-            console.error(error);
+                console.error(
+                    "Registration error:",
+                    error
+                );
+
+                registerMessage.textContent =
+                    error.message;
+
+                registerMessage.className =
+                    "form-note is-error";
+
+                return;
+            }
+
+
+            console.log(
+                "Registered user:",
+                data.user
+            );
+
 
             registerMessage.textContent =
-                "Registration failed: " + error.message;
+                "Account created successfully!";
 
             registerMessage.className =
-                "form-note is-error";
-
-            return;
-        }
+                "form-note is-success";
 
 
-        console.log("Registered user:", data.user);
+            registerForm.reset();
 
-        registerMessage.textContent =
-            "Account created successfully! Check your email to confirm your account.";
+        });
 
-        registerMessage.className =
-            "form-note is-success";
-
-    });
-
-}
-
+    }
 
 });
